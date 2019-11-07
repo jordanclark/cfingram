@@ -1,18 +1,18 @@
 {
     "name":"cfingram",
     "slug":"cfingram",
-    "version":"0.1.0",
+    "version":"0.2.0",
     "author":"Jordan Clark <jordanclark@gmail.com>",
     "keywords":[
         "cfingram",
-		"ecommerce",
-		"shopping",
+        "ecommerce",
+        "shopping",
         "api",
         "rest"
     ],
     "shortDescription":"API client for ingramentertainment.com B2B",
     "type":"modules",
-    "location":"jordanclark/cfingram#v0.1.0",
+    "location":"jordanclark/cfingram#v0.2.0",
     "repository":{
         "URL":"https://github.com/jordanclark/cfingram.git",
         "type":"GIT"
