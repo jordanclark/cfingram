@@ -98,7 +98,7 @@ component {
 
 	function addOrderToBatch(
 		required array batch
-	,	required string account= this.defaultAccountID
+	,	string account= this.defaultAccountID
 	,	required string order_id
 	,	required string item_number
 	,	required numeric price
@@ -121,9 +121,9 @@ component {
 	}
 
 	function processOrderBatch( required array batch, boolean eorder= true ) {
-		var b = { "orders" = [] };
+		var b= { "orders"= [] };
 		var lastOrder= "";
-		var lastBatch = [];
+		var lastBatch= [];
 		for( line in arguments.batch ) {
 			if( lastOrder != line.order_id ) {
 				if( arrayLen( lastBatch ) ) {
@@ -145,6 +145,17 @@ component {
 
 	function getOrderStatus() {
 		return this.getAuthenticated() ?: this.apiRequest( api= "POST /v#this.apiVersion#/order_status" );
+	}
+
+	function getEOrderStatus( required string orderID, string account= this.defaultAccountID ) {
+		var b= { "order_status"= [{
+			"order"= {
+				"account"= arguments.account
+			,	"order_id"= arguments.orderID
+			,	"ingram_order_id"= "Eorder"
+			}
+		}] };
+		return this.getAuthenticated() ?: this.apiRequest( api= "POST /v#this.apiVersion#/order_status", argumentCollection= b );
 	}
 
 	function getInventory( required numeric id ) {
