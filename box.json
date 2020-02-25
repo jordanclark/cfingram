@@ -1,7 +1,7 @@
 {
     "name":"cfingram",
     "slug":"cfingram",
-    "version":"0.3.0",
+    "version":"0.3.1",
     "author":"Jordan Clark <jordanclark@gmail.com>",
     "keywords":[
         "cfingram",
@@ -12,7 +12,7 @@
     ],
     "shortDescription":"API client for ingramentertainment.com B2B",
     "type":"modules",
-    "location":"jordanclark/cfingram#v0.3.0",
+    "location":"jordanclark/cfingram#v0.3.1",
     "repository":{
         "URL":"https://github.com/jordanclark/cfingram.git",
         "type":"GIT"
