@@ -202,7 +202,7 @@ component {
 		};
 		structDelete( out.args, "api" );
 		if ( !structIsEmpty( out.args ) ) {
-			out.body= serializeJSON( out.args );
+			out.body= serializeJSON( out.args, false, false );
 			this.debugLog( out.body );
 			out.headers[ "Accept" ]= "application/json";
 			out.headers[ "Content-Type" ]= "application/json";
